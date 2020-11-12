@@ -26,7 +26,7 @@ class ProductsListRepository() {
         //executando tarefas foras da main thread
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val listResult = ProductsApi.retrofitService.getProducts().productsList
+                val listResult = ProductsApi.retrofitService.getProducts()
                 productsListResponse.postValue(listResult)
 
             } catch (e: Exception) {

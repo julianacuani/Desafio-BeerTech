@@ -22,10 +22,10 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
     inner class ProductItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val ProductName: TextView = itemView.findViewById(R.id.product_name)
         val ProductDescription: TextView = itemView.findViewById(R.id.product_description)
-        val ProductPrice: EditText = itemView.findViewById(R.id.product_price)
+        val ProductPrice: TextView = itemView.findViewById(R.id.product_price)
         val list: ImageView = itemView.findViewById(R.id.product_image)
 
-        fun bind(name: String, description: String, price: Editable, imageURL: String) {
+        fun bind(name: String, description: String, price: String, imageURL: String) {
             ProductName.text = name
             ProductDescription.text = description
             ProductPrice.text = price
@@ -40,7 +40,7 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val itemView = layoutInflater.inflate(R.layout.list_products, parent, false)
-        return ProductItemViewHolder (itemView)
+        return ProductItemViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {

@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/product_image"
         app:layout_constraintStart_toEndOf="@+id/product_image" />
 
-    <EditText
+    <TextView
         android:id="@+id/product_price"
         android:layout_width="82dp"
         android:layout_height="37dp"

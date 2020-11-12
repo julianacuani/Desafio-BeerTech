@@ -1,6 +1,6 @@
 package com.example.desafiobeertech.network
 
-import android.text.Editable
+
 import com.squareup.moshi.Json
 
 data class Product (
@@ -9,9 +9,9 @@ data class Product (
    @Json(name = "descricao")
    val description: String,
    @Json (name = "preco")
-   val price: Editable,
+   val price: String,
    @Json(name = "desconto")
-  val discount: Boolean,
+   val discount: Boolean,
    @Json(name = "imagem")
    val image: String
 )
