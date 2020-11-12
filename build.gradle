@@ -24,3 +24,16 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    appCompatVersion = '1.2.0'
+    constraintLayoutVersion = '2.0.2'
+    coreTestingVersion = '2.1.0'
+    coroutines = '1.3.9'
+    lifecycleVersion = '2.2.0'
+    materialVersion = '1.2.1'
+    roomVersion = '2.2.5' //apagar se não for usar
+    version_retrofit = '2.9.0'
+    version_moshi = '1.11.0' //apagar se não for usar
+    version_glide = '4.11.0'
+}
