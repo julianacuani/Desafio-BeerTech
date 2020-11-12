@@ -34,6 +34,6 @@ ext {
     materialVersion = '1.2.1'
     roomVersion = '2.2.5' //apagar se não for usar
     version_retrofit = '2.9.0'
-    version_moshi = '1.11.0' //apagar se não for usar
+    version_moshi = '1.11.0' 
     version_glide = '4.11.0'
 }
