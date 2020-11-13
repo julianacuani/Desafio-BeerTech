@@ -1,5 +1,6 @@
 package com.example.desafiobeertech.view
 
+import android.graphics.Color
 import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
@@ -36,7 +37,6 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
                 .into(imageView)
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val itemView = layoutInflater.inflate(R.layout.list_products, parent, false)
@@ -49,6 +49,12 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
 
     override fun onBindViewHolder(holder: ProductItemViewHolder, position: Int) {
         val productToShow: Product = data.get(position)
-        holder.bind(productToShow.name, productToShow.description, productToShow.price, productToShow.image)
+
+        if (productToShow.discount){
+            holder.ProductPrice.setTextColor(Color.parseColor("#0FB816"))
+        }else {
+            holder.ProductPrice.setTextColor(Color.parseColor("#000000"))
+        }
+        holder.bind(productToShow.name, productToShow.description, "R$ "+ productToShow.price.replace(".", ","), productToShow.image)
     }
 }

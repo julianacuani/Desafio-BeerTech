@@ -21,7 +21,6 @@ private val retrofit = Retrofit.Builder()
 interface ProductsApiService {
     @GET("produtos")
      suspend fun getProducts(): List<Product>
-
 }
 
 object ProductsApi {
