@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.desafiobeertech.R
@@ -19,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
          //setContentView(R.layout.activity_main)
 
-        supportActionBar?.title="Produtos"
+        val userName = getIntent().getStringExtra("userName")
+        val userNameTextView = findViewById<TextView>(R.id.userEmail)
+        supportActionBar?.title = "Lista de produtos"
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

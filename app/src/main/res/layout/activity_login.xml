@@ -11,7 +11,7 @@
         android:layout_width="351dp"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:hint="Email"
+        android:hint="User"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
