@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
          //setContentView(R.layout.activity_main)
 
-        val userName = getIntent().getStringExtra("userName")
-        val userNameTextView = findViewById<TextView>(R.id.userEmail)
         supportActionBar?.title = "Lista de produtos"
 
         binding = ActivityMainBinding.inflate(layoutInflater)
